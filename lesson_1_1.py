@@ -1,3 +1,7 @@
+"""
+彩度、明度の理解
+"""
+
 if False:
     from lib.Processing3 import *
 

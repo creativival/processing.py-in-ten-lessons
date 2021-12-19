@@ -15,3 +15,13 @@ def setup():
             fill(360, 10 * i, 10 * j)
             rect(50 * i, 50 * j, 50, 50)
     print('hello world')
+    word = 'world'
+    print('hello {}'.format(word))
+    # print(f'hello {word}')  # 未対応
+    hello = u'こんにちは'
+    world = u'世界'
+    print(hello)
+    print(world)
+    print(hello, world)
+    print(hello + world)
+    # print('hello {}'.format(world))  # 未対応

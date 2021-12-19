@@ -5,16 +5,18 @@
 if False:
     from lib.Processing3 import *
 
+BACKGROUND_COLOR = color(0,44,77)
+
 
 def setup():
     colorMode(HSB, 360, 100, 100)
     noStroke()
     size(1000, 1000)
-    background(0)
+    background(BACKGROUND_COLOR)
     # 7 color
     for i in range(12):
         if i >= 7:
-            fill('#00000')
+            fill(BACKGROUND_COLOR)
         else:
             fill(map(i, 0, 7, 0, 300), 100, 100)
         radius = 50 * (12 - i)

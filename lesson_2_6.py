@@ -1,13 +1,15 @@
 """
-落下するハートマーク
+落下するマーク
 """
 
 if False:
     from lib.Processing3 import *
+import util
 
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
+MARK_TYPE = 'leaf'  # heart, leaf
 FALL_SPEED = PVector(0, 0.1)
 marks = []
 
@@ -20,8 +22,7 @@ def setup():
         p = PVector(random(width), random(height))
         angle = map(random(1), 0, 1, 0, TWO_PI)
         mark_size = random(10, 30)
-        mark_color = random(20)
-        mark = HeartMark(p, angle, mark_size, mark_color)
+        mark = HeartMark(p, angle, mark_size, MARK_TYPE)
         marks.append(mark)
 
 
@@ -34,13 +35,31 @@ def draw():
 
 
 class HeartMark:
-    def __init__(self, p, angle, mark_size, mark_color):
+    def __init__(self, p, angle, mark_size, mark_type):
         self.position = p
         self.angle = angle
         self.mark_size = mark_size
-        self.mark_color = mark_color
+        self.mark_type = mark_type
 
     def draw(self):
+        if self.mark_type == 'leaf':
+            self.mark_color = random(120, 150)
+            vt1 = PVector(self.mark_size / 2, self.mark_size)
+            vt2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
+            vt3 = PVector(self.mark_size / 2, 0)
+            cp1 = PVector(self.mark_size * 3 / 8, self.mark_size)
+            cp2 = PVector(self.mark_size / 4, self.mark_size * 7 / 8)
+            cp3 = PVector(self.mark_size / 4, self.mark_size / 2)
+            cp4 = PVector(self.mark_size * 3 / 8, self.mark_size / 4)
+        else:  # heart
+            self.mark_color = random(20)
+            vt1 = PVector(self.mark_size / 2, self.mark_size)
+            vt2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
+            vt3 = PVector(self.mark_size / 2, self.mark_size / 4)
+            cp1 = PVector(self.mark_size / 2, self.mark_size)
+            cp2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
+            cp3 = PVector(-self.mark_size / 4, self.mark_size / 4)
+            cp4 = PVector(self.mark_size / 4, -self.mark_size / 4)
         fill(self.mark_color, 100, 100)
         # strokeWeight(1)
         # stroke(self.mark_color, 100, 100)
@@ -48,53 +67,19 @@ class HeartMark:
         pushMatrix()
         translate(self.position.x, self.position.y)
         rotate(self.angle)
-        vt1 = PVector(self.mark_size / 2, self.mark_size)
-        vt2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
-        vt3 = PVector(self.mark_size / 2, self.mark_size / 4)
-        cp1 = PVector(-self.mark_size / 4, self.mark_size / 4)
-        cp2 = PVector(self.mark_size / 4, -self.mark_size / 4)
-        bezier(
-            vt2.x,
-            vt2.y,
-            cp1.x,
-            cp1.y,
-            cp2.x,
-            cp2.y,
-            vt3.x,
-            vt3.y
-        )
-        bezier(
-            mirror_x(vt2.x, self.mark_size),
-            vt2.y,
-            mirror_x(cp1.x, self.mark_size),
-            cp1.y,
-            mirror_x(cp2.x, self.mark_size),
-            cp2.y,
-            mirror_x(vt3.x, self.mark_size),
-            vt3.y
-        )
-        quad(
-            vt1.x,
-            vt1.y,
-            vt2.x,
-            vt2.y,
-            vt3.x,
-            vt3.y,
-            mirror_x(vt2.x, self.mark_size),
-            vt2.y
-        )
+        util.draw_bezier_shape(vt1, vt2, vt3, cp1, cp2, cp3, cp4, self.mark_size)
         popMatrix()
 
     def update(self):
         speed = PVector.mult(FALL_SPEED, self.mark_size)
         speed.y += noise(1)
         self.position = PVector.add(self.position, speed)
-        self.angle += random(PI/180)
+        self.angle += random(-PI / 90, PI / 90)
         self.mark_size *= random(1 / 1.01, 1.01)
 
     def reset_size(self):
         if self.mark_size < 5 or 40 < self.mark_size:
-            self.mark_size = random(10,20)
+            self.mark_size = random(10, 20)
 
     def through_walls(self):
         if self.position.x < 0:

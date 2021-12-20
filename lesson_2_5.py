@@ -9,7 +9,9 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
-MARK_TYPE = 'heart'  # heart, leaf
+MARK_TYPE = 'diamond'  # heart, leaf, diamond
+MIN_MARK_SIZE = 20
+MAX_MARK_SIZE = 40
 
 
 def setup():
@@ -19,12 +21,21 @@ def setup():
     for i in range(100):
         p = PVector(random(width), random(height))
         angle = map(random(1), 0, 1, 0, TWO_PI)
-        mark_size = random(10, 30)
+        mark_size = random(MIN_MARK_SIZE, MAX_MARK_SIZE)
         draw_mark(p, angle, mark_size, MARK_TYPE)
 
 
 def draw_mark(p, angle, mark_size, mark_type):
-    if mark_type == 'leaf':
+    if mark_type == 'diamond':
+        mark_color = random(240, 270)
+        vt1 = PVector(mark_size / 2, mark_size)
+        vt2 = PVector(mark_size / 4, mark_size / 2)
+        vt3 = PVector(mark_size / 2, 0)
+        cp1 = PVector(mark_size / 2, mark_size)
+        cp2 = PVector(mark_size / 4, mark_size / 2)
+        cp3 = PVector(mark_size / 4, mark_size /2)
+        cp4 = PVector(mark_size / 2, 0)
+    elif mark_type == 'leaf':
         mark_color = random(120, 150)
         vt1 = PVector(mark_size / 2, mark_size)
         vt2 = PVector(mark_size / 4, mark_size * 3 / 4)

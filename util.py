@@ -1,8 +1,10 @@
+# coding=utf-8
 if False:
     from lib.Processing3 import *
 
 
 def draw_bezier_shape(vt1, vt2, vt3, cp1, cp2, cp3, cp4, mark_size):
+    # ベジェ曲線で囲まれた図形
     bezier(
         vt1.x,
         vt1.y,

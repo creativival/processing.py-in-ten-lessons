@@ -9,7 +9,9 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
-MARK_TYPE = 'leaf'  # heart, leaf
+MARK_TYPE = 'diamond'  # heart, leaf or diamond
+MIN_MARK_SIZE = 10
+MAX_MARK_SIZE = 30
 FALL_SPEED = PVector(0, 0.1)
 marks = []
 
@@ -21,7 +23,7 @@ def setup():
     for i in range(100):
         p = PVector(random(width), random(height))
         angle = map(random(1), 0, 1, 0, TWO_PI)
-        mark_size = random(10, 30)
+        mark_size = random(MIN_MARK_SIZE, MAX_MARK_SIZE)
         mark = HeartMark(p, angle, mark_size, MARK_TYPE)
         marks.append(mark)
 
@@ -42,7 +44,16 @@ class HeartMark:
         self.mark_type = mark_type
 
     def draw(self):
-        if self.mark_type == 'leaf':
+        if self.mark_type == 'diamond':
+            self.mark_color = random(240, 270)
+            vt1 = PVector(self.mark_size / 2, self.mark_size)
+            vt2 = PVector(self.mark_size / 4, self.mark_size / 2)
+            vt3 = PVector(self.mark_size / 2, 0)
+            cp1 = PVector(self.mark_size / 2, self.mark_size)
+            cp2 = PVector(self.mark_size / 4, self.mark_size / 2)
+            cp3 = PVector(self.mark_size / 4, self.mark_size /2)
+            cp4 = PVector(self.mark_size / 2, 0)
+        elif self.mark_type == 'leaf':
             self.mark_color = random(120, 150)
             vt1 = PVector(self.mark_size / 2, self.mark_size)
             vt2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
@@ -78,7 +89,7 @@ class HeartMark:
         self.mark_size *= random(1 / 1.01, 1.01)
 
     def reset_size(self):
-        if self.mark_size < 5 or 40 < self.mark_size:
+        if self.mark_size < MIN_MARK_SIZE / 2 or MAX_MARK_SIZE * 1.5 < self.mark_size:
             self.mark_size = random(10, 20)
 
     def through_walls(self):

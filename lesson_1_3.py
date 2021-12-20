@@ -5,7 +5,7 @@
 if False:
     from lib.Processing3 import *
 
-BACKGROUND_COLOR = color(0,44,77)
+BACKGROUND_COLOR = color(0, 44, 77)
 MAGNIFICATION = 10  # 倍率（数字）
 
 

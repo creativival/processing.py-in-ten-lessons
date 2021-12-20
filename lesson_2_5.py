@@ -18,14 +18,14 @@ def setup():
         p = PVector(random(width), random(height))
         angle = map(random(1), 0, 1, 0, TWO_PI)
         mark_size = random(10, 30)
-        heart_color = random(20)
-        draw_mark(p, angle, mark_size, heart_color)
+        mark_color = random(20)
+        draw_mark(p, angle, mark_size, mark_color)
 
 
-def draw_mark(p, angle, mark_size, heart_color):
-    fill(heart_color, 100, 100)
+def draw_mark(p, angle, mark_size, mark_color):
+    fill(mark_color, 100, 100)
     strokeWeight(1)
-    stroke(heart_color, 100, 100)
+    stroke(mark_color, 100, 100)
     pushMatrix()
     translate(p.x, p.y)
     rotate(angle)

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="落下するマーク">
-      <change afterPath="$PROJECT_DIR$/lesson_2_4_3.py" afterDir="false" />
+    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="落下するマーク（ハート、葉っぱ、ダイアモンドに対応）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_4_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_4_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_4_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_4_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_4_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_4_3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_2_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_5.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_2_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_6.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util.py" afterDir="false" />
@@ -91,7 +93,7 @@
       <workItem from="1639810399218" duration="315000" />
       <workItem from="1639810753706" duration="267000" />
       <workItem from="1639811036580" duration="2900000" />
-      <workItem from="1639816515654" duration="33297000" />
+      <workItem from="1639816515654" duration="38391000" />
     </task>
     <task id="LOCAL-00001" summary="虹">
       <created>1639825465711</created>
@@ -142,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640032440077</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="落下するマーク（ハート、葉っぱ、ダイアモンドに対応）">
+      <created>1640033355409</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1640033355409</updated>
+    </task>
+    <task id="LOCAL-00009" summary="落下するマーク（ハート、葉っぱ、ダイアモンドに対応）">
+      <created>1640033453726</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1640033453726</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,10 +184,11 @@
     <MESSAGE value="たくさんのハートマーク" />
     <MESSAGE value="落下するハートマーク" />
     <MESSAGE value="落下するマーク" />
-    <option name="LAST_COMMIT_MESSAGE" value="落下するマーク" />
+    <MESSAGE value="落下するマーク（ハート、葉っぱ、ダイアモンドに対応）" />
+    <option name="LAST_COMMIT_MESSAGE" value="落下するマーク（ハート、葉っぱ、ダイアモンドに対応）" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640033060478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640126259970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/processing_py_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1639810475506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

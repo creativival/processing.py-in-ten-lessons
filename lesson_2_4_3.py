@@ -17,8 +17,6 @@ def setup():
     image(grid, 0, 0)
     # background(BACKGROUND_COLOR)
     fill(MARK_COLOR)
-    strokeWeight(1)
-    stroke(MARK_COLOR)
     noStroke()
     vt1 = PVector(SIZE / 2, SIZE)
     vt2 = PVector(SIZE / 4, SIZE / 2)

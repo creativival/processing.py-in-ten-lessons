@@ -9,7 +9,7 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
-MARK_TYPE = 'diamond'  # heart, leaf or diamond
+MARK_TYPE = 'star'  # heart, leaf, diamond or star
 MIN_MARK_SIZE = 10
 MAX_MARK_SIZE = 30
 FALL_SPEED = PVector(0, 0.1)
@@ -44,42 +44,7 @@ class HeartMark:
         self.mark_type = mark_type
 
     def draw(self):
-        if self.mark_type == 'diamond':
-            self.mark_color = random(240, 270)
-            vt1 = PVector(self.mark_size / 2, self.mark_size)
-            vt2 = PVector(self.mark_size / 4, self.mark_size / 2)
-            vt3 = PVector(self.mark_size / 2, 0)
-            cp1 = PVector(self.mark_size / 2, self.mark_size)
-            cp2 = PVector(self.mark_size / 4, self.mark_size / 2)
-            cp3 = PVector(self.mark_size / 4, self.mark_size /2)
-            cp4 = PVector(self.mark_size / 2, 0)
-        elif self.mark_type == 'leaf':
-            self.mark_color = random(120, 150)
-            vt1 = PVector(self.mark_size / 2, self.mark_size)
-            vt2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
-            vt3 = PVector(self.mark_size / 2, 0)
-            cp1 = PVector(self.mark_size * 3 / 8, self.mark_size)
-            cp2 = PVector(self.mark_size / 4, self.mark_size * 7 / 8)
-            cp3 = PVector(self.mark_size / 4, self.mark_size / 2)
-            cp4 = PVector(self.mark_size * 3 / 8, self.mark_size / 4)
-        else:  # heart
-            self.mark_color = random(20)
-            vt1 = PVector(self.mark_size / 2, self.mark_size)
-            vt2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
-            vt3 = PVector(self.mark_size / 2, self.mark_size / 4)
-            cp1 = PVector(self.mark_size / 2, self.mark_size)
-            cp2 = PVector(self.mark_size / 4, self.mark_size * 3 / 4)
-            cp3 = PVector(-self.mark_size / 4, self.mark_size / 4)
-            cp4 = PVector(self.mark_size / 4, -self.mark_size / 4)
-        fill(self.mark_color, 100, 100)
-        # strokeWeight(1)
-        # stroke(self.mark_color, 100, 100)
-        noStroke()
-        pushMatrix()
-        translate(self.position.x, self.position.y)
-        rotate(self.angle)
-        util.draw_bezier_shape(vt1, vt2, vt3, cp1, cp2, cp3, cp4, self.mark_size)
-        popMatrix()
+        util.draw_mark(self.position, self.angle, self.mark_size, MARK_TYPE)
 
     def update(self):
         speed = PVector.mult(FALL_SPEED, self.mark_size)

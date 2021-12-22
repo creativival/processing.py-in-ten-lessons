@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="五芒星を追加">
-      <change afterPath="$PROJECT_DIR$/lesson_2_4_6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2_4_7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_1_0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/processing.py-te-_lessons.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/processing.py-te-_lessons.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_4_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_4_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_1_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_1_1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +23,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/lesson_2_6.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,10 +46,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\data" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\lib" />
@@ -94,6 +96,7 @@
       <workItem from="1639810753706" duration="267000" />
       <workItem from="1639811036580" duration="2900000" />
       <workItem from="1639816515654" duration="53164000" />
+      <workItem from="1640166641983" duration="1725000" />
     </task>
     <task id="LOCAL-00001" summary="虹">
       <created>1639825465711</created>
@@ -195,6 +198,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

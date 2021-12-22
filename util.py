@@ -71,7 +71,25 @@ def mirror_y(p, mark_size):
 
 def draw_mark(p, angle, mark_size, mark_type):
     if mark_type == 'star':
-        mark_color = random(30, 60)
+        mark_color = random(15, 60)
+        radius = mark_size / 2
+        pushMatrix()
+        translate(radius, radius)
+        vertices = []
+        control_points = []
+        for i in range(5):
+            vertices.append(
+                PVector(radius * cos(PI * i * 4 / 10), radius * sin(PI * i * 4 / 10))
+            )
+            control_points.append(
+                PVector(radius * cos(PI * (2 + i * 4) / 10) / 3, radius * sin(PI * (2 + i * 4) / 10) / 3)
+            )
+            control_points.append(
+                PVector(radius * cos(PI * (2 + i * 4) / 10) / 3, radius * sin(PI * (2 + i * 4) / 10) / 3)
+            )
+        popMatrix()
+    elif mark_type == 'shine':
+        mark_color = random(180, 210)
         vt1 = PVector(mark_size / 2, mark_size)
         vt2 = PVector(0, mark_size / 2)
         vt3 = PVector(mark_size / 2, 0)

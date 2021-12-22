@@ -9,7 +9,7 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 mark_size_X = 800
 mark_size_Y = 600
-MARK_TYPE = 'star'  # heart, leaf, diamond or star
+MARK_TYPE = 'star'  # heart, leaf, diamond, shine, star
 MIN_MARK_mark_size = 20
 MAX_MARK_mark_size = 40
 
@@ -23,6 +23,7 @@ def setup():
         angle = map(random(1), 0, 1, 0, TWO_PI)
         mark_size = random(MIN_MARK_mark_size, MAX_MARK_mark_size)
         util.draw_mark(p, angle, mark_size, MARK_TYPE)
+        print(p, angle, mark_size, MARK_TYPE)
 
 
 def mirror_x(x, mark_size):

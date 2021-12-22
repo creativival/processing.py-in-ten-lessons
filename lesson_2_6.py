@@ -9,7 +9,7 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
-MARK_TYPE = 'star'  # heart, leaf, diamond or star
+MARK_TYPE = 'star'  # heart, leaf, diamond, shine, star
 MIN_MARK_SIZE = 10
 MAX_MARK_SIZE = 30
 FALL_SPEED = PVector(0, 0.1)

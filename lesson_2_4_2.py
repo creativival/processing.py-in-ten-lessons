@@ -21,9 +21,16 @@ def setup():
     vt1 = PVector(SIZE / 2, SIZE)
     vt2 = PVector(SIZE / 4, SIZE * 3 / 4)
     vt3 = PVector(SIZE / 2, 0)
+    vt4 = util.mirror_x(vt2, SIZE)
     cp1 = PVector(SIZE * 3 / 8, SIZE)
     cp2 = PVector(SIZE / 4, SIZE * 7 / 8)
     cp3 = PVector(SIZE / 4, SIZE / 2)
     cp4 = PVector(SIZE * 3 / 8, SIZE / 4)
-    util.draw_bezier_shape(vt1, vt2, vt3, cp1, cp2, cp3, cp4, SIZE)
-    util.draw_check_point(vt1, vt2, vt3, cp1, cp2, cp3, cp4, SIZE)
+    cp5 = util.mirror_x(cp4, SIZE)
+    cp6 = util.mirror_x(cp3, SIZE)
+    cp7 = util.mirror_x(cp2, SIZE)
+    cp8 = util.mirror_x(cp1, SIZE)
+    vertices = [vt1, vt2, vt3, vt4]
+    control_points = [cp1, cp2, cp3, cp4, cp5, cp6, cp7, cp8]
+    util.draw_bezier_shape(vertices, control_points)
+    util.draw_check_point(vertices, control_points)

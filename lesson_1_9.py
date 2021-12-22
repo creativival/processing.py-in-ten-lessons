@@ -25,15 +25,15 @@ def draw():
     # 三角関数
     for i in range(frameCount):
         angle = i / 60.0
-        draw_point_angle = -angle - PI / 2.0
+        circle_angle = -angle - PI / 2.0
         circle_center = PVector(angle * RADIUS, RADIUS)
         draw_point = PVector.add(circle_center,
-                                 PVector(RADIUS * cos(draw_point_angle), RADIUS * sin(draw_point_angle)))
+                                 PVector(RADIUS * cos(circle_angle), RADIUS * sin(circle_angle)))
         _angle = (i - 1) / 60.0
-        _draw_point_angle = -_angle - PI / 2.0
+        _circle_angle = -_angle - PI / 2.0
         _circle_center = PVector(_angle * RADIUS, RADIUS)
         _draw_point = PVector.add(_circle_center,
-                                 PVector(RADIUS * cos(_draw_point_angle), RADIUS * sin(_draw_point_angle)))
+                                 PVector(RADIUS * cos(_circle_angle), RADIUS * sin(_circle_angle)))
         noFill()
         stroke(255, 0, 0)
         line(_draw_point.x, _draw_point.y, draw_point.x, draw_point.y)

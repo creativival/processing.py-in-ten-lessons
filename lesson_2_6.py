@@ -6,10 +6,21 @@ if False:
     from lib.Processing3 import *
 import util
 
+"""
+heart
+leaf
+diamond
+shine
+five_pointed_star
+six_pointed_star
+gear
+"""
+MARK_TYPE = 'gear'
+MIN_COLOR = 0
+MAX_COLOR = 360
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
-MARK_TYPE = 'star'  # heart, leaf, diamond, shine, star
 MIN_MARK_SIZE = 10
 MAX_MARK_SIZE = 30
 FALL_SPEED = PVector(0, 0.1)
@@ -24,7 +35,8 @@ def setup():
         p = PVector(random(width), random(height))
         angle = map(random(1), 0, 1, 0, TWO_PI)
         mark_size = random(MIN_MARK_SIZE, MAX_MARK_SIZE)
-        mark = HeartMark(p, angle, mark_size, MARK_TYPE)
+        mark_color = random(MIN_COLOR, MAX_COLOR)
+        mark = Mark(p, angle, mark_size, mark_color, MARK_TYPE)
         marks.append(mark)
 
 
@@ -36,15 +48,16 @@ def draw():
         m.through_walls()
 
 
-class HeartMark:
-    def __init__(self, p, angle, mark_size, mark_type):
+class Mark:
+    def __init__(self, p, angle, mark_size, mark_color, mark_type):
         self.position = p
         self.angle = angle
         self.mark_size = mark_size
+        self.mark_color = mark_color
         self.mark_type = mark_type
 
     def draw(self):
-        util.draw_mark(self.position, self.angle, self.mark_size, MARK_TYPE)
+        util.draw_mark(self.position, self.angle, self.mark_size, self.mark_color, MARK_TYPE)
 
     def update(self):
         speed = PVector.mult(FALL_SPEED, self.mark_size)

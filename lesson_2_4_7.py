@@ -1,5 +1,5 @@
 """
-曲線 五芒星
+曲線 歯車
 """
 
 if False:
@@ -9,8 +9,8 @@ import util
 MARK_COLOR = color(255, 0, 255)
 BACKGROUND_COLOR = color(0, 44, 77)
 MARK_SIZE = 400
-NUMBER_OF_VERTICES = 5
-RATIO = 1.0 / 3
+NUMBER_OF_VERTICES = 20
+RATIO = 9.0 / 10
 
 
 def setup():

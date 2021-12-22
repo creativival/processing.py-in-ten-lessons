@@ -1,10 +1,8 @@
-# coding=utf-8
 if False:
     from lib.Processing3 import *
 
 
 def draw_bezier_shape(vertices, control_points):
-    # ベジェ曲線で囲まれた図形
     beginShape()
     vertex(vertices[0].x, vertices[0].y)
     for i in range(len(vertices)):
@@ -69,27 +67,71 @@ def mirror_y(p, mark_size):
     return PVector(p.x, mark_size - p.y)
 
 
-def draw_mark(p, angle, mark_size, mark_type):
-    if mark_type == 'star':
-        mark_color = random(15, 60)
+def draw_mark(p, angle, mark_size, mark_color, mark_type):
+    if mark_type == 'gear':
+        number_of_vertices = int(random(8, 14))
+        ratio = 8.0 / 10
         radius = mark_size / 2
         pushMatrix()
         translate(radius, radius)
         vertices = []
         control_points = []
-        for i in range(5):
+        for i in range(number_of_vertices):
+            vertex_angle = PI * i * 4 / (2 * number_of_vertices)
+            control_point_angle = PI * (2 + i * 4) / (2 * number_of_vertices)
             vertices.append(
-                PVector(radius * cos(PI * i * 4 / 10), radius * sin(PI * i * 4 / 10))
+                PVector(radius * cos(vertex_angle), radius * sin(vertex_angle))
             )
             control_points.append(
-                PVector(radius * cos(PI * (2 + i * 4) / 10) / 3, radius * sin(PI * (2 + i * 4) / 10) / 3)
+                PVector(radius * cos(control_point_angle) * ratio, radius * sin(control_point_angle) * ratio)
             )
             control_points.append(
-                PVector(radius * cos(PI * (2 + i * 4) / 10) / 3, radius * sin(PI * (2 + i * 4) / 10) / 3)
+                PVector(radius * cos(control_point_angle) * ratio, radius * sin(control_point_angle) * ratio)
+            )
+        popMatrix()
+    elif mark_type == 'six_pointed_star':
+        number_of_vertices = 6
+        ratio = 1.0 / 2
+        radius = mark_size / 2
+        pushMatrix()
+        translate(radius, radius)
+        vertices = []
+        control_points = []
+        for i in range(number_of_vertices):
+            vertex_angle = PI * i * 4 / (2 * number_of_vertices)
+            control_point_angle = PI * (2 + i * 4) / (2 * number_of_vertices)
+            vertices.append(
+                PVector(radius * cos(vertex_angle), radius * sin(vertex_angle))
+            )
+            control_points.append(
+                PVector(radius * cos(control_point_angle) * ratio, radius * sin(control_point_angle) * ratio)
+            )
+            control_points.append(
+                PVector(radius * cos(control_point_angle) * ratio, radius * sin(control_point_angle) * ratio)
+            )
+        popMatrix()
+    elif mark_type == 'five_pointed_star':
+        number_of_vertices = 5
+        ratio = 1.0 / 3
+        radius = mark_size / 2
+        pushMatrix()
+        translate(radius, radius)
+        vertices = []
+        control_points = []
+        for i in range(number_of_vertices):
+            vertex_angle = PI * i * 4 / (2 * number_of_vertices)
+            control_point_angle = PI * (2 + i * 4) / (2 * number_of_vertices)
+            vertices.append(
+                PVector(radius * cos(vertex_angle), radius * sin(vertex_angle))
+            )
+            control_points.append(
+                PVector(radius * cos(control_point_angle) * ratio, radius * sin(control_point_angle) * ratio)
+            )
+            control_points.append(
+                PVector(radius * cos(control_point_angle) * ratio, radius * sin(control_point_angle) * ratio)
             )
         popMatrix()
     elif mark_type == 'shine':
-        mark_color = random(180, 210)
         vt1 = PVector(mark_size / 2, mark_size)
         vt2 = PVector(0, mark_size / 2)
         vt3 = PVector(mark_size / 2, 0)
@@ -105,7 +147,6 @@ def draw_mark(p, angle, mark_size, mark_type):
         vertices = [vt1, vt2, vt3, vt4]
         control_points = [cp1, cp2, cp3, cp4, cp5, cp6, cp7, cp8]
     elif mark_type == 'diamond':
-        mark_color = random(240, 270)
         vt1 = PVector(mark_size / 2, mark_size)
         vt2 = PVector(mark_size / 4, mark_size / 2)
         vt3 = PVector(mark_size / 2, 0)
@@ -121,7 +162,6 @@ def draw_mark(p, angle, mark_size, mark_type):
         vertices = [vt1, vt2, vt3, vt4]
         control_points = [cp1, cp2, cp3, cp4, cp5, cp6, cp7, cp8]
     elif mark_type == 'leaf':
-        mark_color = random(120, 150)
         vt1 = PVector(mark_size / 2, mark_size)
         vt2 = PVector(mark_size / 4, mark_size * 3 / 4)
         vt3 = PVector(mark_size / 2, 0)
@@ -137,7 +177,6 @@ def draw_mark(p, angle, mark_size, mark_type):
         vertices = [vt1, vt2, vt3, vt4]
         control_points = [cp1, cp2, cp3, cp4, cp5, cp6, cp7, cp8]
     else:  # heart
-        mark_color = random(20)
         vt1 = PVector(mark_size / 2, mark_size)
         vt2 = PVector(mark_size / 4, mark_size * 3 / 4)
         vt3 = PVector(mark_size / 2, mark_size / 4)

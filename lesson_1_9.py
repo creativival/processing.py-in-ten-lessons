@@ -22,7 +22,7 @@ def draw():
     stroke(0, 255, 0)
     line(-2000, 0, 2000, 0)
     line(0, -2000, 0, 2000)
-    # 三角関数
+    # サイクロイド曲線
     for i in range(frameCount):
         angle = i / 60.0
         circle_angle = -angle - PI / 2.0

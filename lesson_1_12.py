@@ -15,6 +15,14 @@ def setup():
     size(1000, 1000)
     # textAlign(CENTER, CENTER)
     textSize(20)
+    background(BACKGROUND_COLOR)
+    translate(width / 2, height / 2)
+    noFill()
+    stroke(0, 255, 0)
+    line(-2000, 0, 2000, 0)
+    line(0, -2000, 0, 2000)
+    stroke(127)
+    ellipse(0, 0, BASE_CIRCLE_RADIUS * 2, BASE_CIRCLE_RADIUS * 2)
 
 
 def draw():

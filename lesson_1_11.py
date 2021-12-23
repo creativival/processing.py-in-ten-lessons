@@ -25,7 +25,7 @@ def draw():
     line(0, -2000, 0, 2000)
     stroke(127)
     ellipse(0, 0, BASE_CIRCLE_RADIUS * 2, BASE_CIRCLE_RADIUS * 2)
-    # 三角関数
+    # ハイポサイクロイド曲線
     for i in range(frameCount):
         base_circle_angle = i / 60.0
         circle_angle = -base_circle_angle * BASE_CIRCLE_RADIUS / RADIUS + PI

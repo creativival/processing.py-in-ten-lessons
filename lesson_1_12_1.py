@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import util
 
 BACKGROUND_COLOR = color(0, 44, 77)
 BASE_CIRCLE_RADIUS = 300
@@ -87,3 +88,7 @@ def draw():
     fill(255, 0, 0)
     noStroke()
     ellipse(draw_point.x, draw_point.y, 4, 4)
+
+    # MIN_FRAME = 360
+    # MAX_FRAME = 540
+    # util.save_frame(MIN_FRAME, MAX_FRAME)

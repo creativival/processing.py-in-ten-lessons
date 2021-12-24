@@ -1,10 +1,10 @@
 import sys
 import cv2
 
-VIDEO_FILE_NAME = 'dancing_girl.mp4'
-VIDEO_SIZE = [800, 600]
-MIN_FRAME = 1
-MAX_FRAME = 180
+VIDEO_FILE_NAME = 'spirograph.mp4'
+VIDEO_SIZE = [1000, 1000]
+MIN_FRAME = 360
+MAX_FRAME = 540
 
 # encoder(for mp4)
 fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="ベジェ曲線による方眼紙の変形">
+    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）">
+      <change afterPath="$PROJECT_DIR$/lesson_2_８.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_7.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,7 @@
       <workItem from="1639816515654" duration="53164000" />
       <workItem from="1640166641983" duration="17869000" />
       <workItem from="1640251619916" duration="17871000" />
-      <workItem from="1640341665677" duration="5413000" />
+      <workItem from="1640341665677" duration="6896000" />
     </task>
     <task id="LOCAL-00001" summary="虹">
       <created>1639825465711</created>
@@ -231,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640359411686</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）">
+      <created>1640379151002</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1640379151002</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +276,8 @@
     <MESSAGE value="ダンサー（アニメーション）" />
     <MESSAGE value="スピログラフ動画制作" />
     <MESSAGE value="ベジェ曲線による方眼紙の変形" />
-    <option name="LAST_COMMIT_MESSAGE" value="ベジェ曲線による方眼紙の変形" />
+    <MESSAGE value="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）" />
+    <option name="LAST_COMMIT_MESSAGE" value="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640153092402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

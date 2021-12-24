@@ -1,5 +1,5 @@
 """
-ベジェ曲線による方眼紙の変形
+ベジェ曲線による方眼紙の変形（S字カーブ）
 """
 
 if False:
@@ -33,17 +33,20 @@ def draw():
         # ベジェ曲線
         vertex_point_1 = PVector(i * 10 - 2000, 0)
         vertex_point_2 = PVector(i * 10 - 2000, height)
-        if i <= 250:
-            add_value = i * count / 20.0
-        else:
-            add_value = -(501 - i) * count / 20.0
+        if is_addable:
+            count += 1
+        # if i <= 250:
+        #     add_value = i * count / 20.0
+        # else:
+        #     add_value = -(501 - i) * count / 20.0
+        add_value = count / 20.0
         control_point_1 = PVector.add(
             vertex_point_1,
-            PVector(add_value, -100)
+            PVector(add_value, add_value)
         )
         control_point_2 = PVector.add(
             vertex_point_2,
-            PVector(add_value, 100)
+            PVector(-add_value, -add_value)
         )
         print(control_point_1, control_point_2)
         bezier(

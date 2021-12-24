@@ -21,17 +21,17 @@ def setup():
 
 def draw():
     background(BACKGROUND_COLOR)
-    for i in range(101):
+    for i in range(501):
         # # 方眼紙
         # line(i * 10, 0, i * 10, height)
         # line(0, i * 10, width, i * 10)
         # ベジェ曲線
-        vertex_point_1 = PVector(i * 10, 0)
-        vertex_point_2 = PVector(i * 10, height)
-        if i <= 50:
-            add_value = i * frameCount / 2.0
+        vertex_point_1 = PVector(i * 10 - 2000, 0)
+        vertex_point_2 = PVector(i * 10 - 2000, height)
+        if i <= 250:
+            add_value = i * frameCount / 20.0
         else:
-            add_value = -(101 - i) * frameCount / 2.0
+            add_value = -(501 - i) * frameCount / 20.0
         control_point_1 = PVector.add(
             vertex_point_1,
             PVector(add_value, -100)

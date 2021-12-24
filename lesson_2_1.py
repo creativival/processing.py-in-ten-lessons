@@ -34,4 +34,4 @@ def draw():
 def mouseClicked():
     # 画像を保存
     print('save image')
-    save('grid.png')
+    save('output_images/grid.png')

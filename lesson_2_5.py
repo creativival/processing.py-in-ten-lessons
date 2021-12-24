@@ -36,7 +36,3 @@ def setup():
         mark_color = random(MIN_COLOR, MAX_COLOR)
         util.draw_mark(p, angle, mark_size, mark_color, MARK_TYPE)
         print(p, angle, mark_size, MARK_TYPE)
-
-
-def mirror_x(x, mark_size):
-    return mark_size - x

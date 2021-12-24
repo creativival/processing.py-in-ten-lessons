@@ -15,15 +15,18 @@ five_pointed_star
 six_pointed_star
 gear
 """
-MARK_TYPE = 'gear'
-MIN_COLOR = 0
-MAX_COLOR = 360
+SETTINGS = {
+    'type': 'gear',
+    'number_of_marks': 50,
+    'min_size': 10,
+    'max_size': 30,
+    'min_color': 0,
+    'max_color': 360,
+    'fall_speed': PVector(0, 0.1)
+}
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 800
 SIZE_Y = 600
-MIN_MARK_SIZE = 10
-MAX_MARK_SIZE = 30
-FALL_SPEED = PVector(0, 0.1)
 marks = []
 
 
@@ -31,12 +34,12 @@ def setup():
     size(SIZE_X, SIZE_Y)
     colorMode(HSB, 360, 100, 100)
     blendMode(ADD)
-    for i in range(100):
+    for i in range(SETTINGS['number_of_marks']):
         p = PVector(random(width), random(height))
         angle = map(random(1), 0, 1, 0, TWO_PI)
-        mark_size = random(MIN_MARK_SIZE, MAX_MARK_SIZE)
-        mark_color = random(MIN_COLOR, MAX_COLOR)
-        mark = Mark(p, angle, mark_size, mark_color, MARK_TYPE)
+        mark_size = random(SETTINGS['min_size'], SETTINGS['max_size'])
+        mark_color = random(SETTINGS['min_color'], SETTINGS['max_color'])
+        mark = util.Mark(p, angle, mark_size, mark_color, SETTINGS)
         marks.append(mark)
 
 
@@ -46,46 +49,3 @@ def draw():
         m.draw()
         m.update()
         m.through_walls()
-
-
-class Mark:
-    def __init__(self, p, angle, mark_size, mark_color, mark_type):
-        self.position = p
-        self.angle = angle
-        self.mark_size = mark_size
-        self.mark_color = mark_color
-        self.mark_type = mark_type
-
-    def draw(self):
-        util.draw_mark(self.position, self.angle, self.mark_size, self.mark_color, MARK_TYPE)
-
-    def update(self):
-        speed = PVector.mult(FALL_SPEED, self.mark_size)
-        speed.y += noise(1)
-        self.position = PVector.add(self.position, speed)
-        self.angle += random(-PI / 90, PI / 90)
-        self.mark_size *= random(1 / 1.01, 1.01)
-
-    def reset_size(self):
-        if self.mark_size < MIN_MARK_SIZE / 2 or MAX_MARK_SIZE * 1.5 < self.mark_size:
-            self.mark_size = random(10, 20)
-
-    def through_walls(self):
-        if self.position.x < 0:
-            self.position.x = SIZE_X
-            self.reset_size()
-        if SIZE_X < self.position.x:
-            self.position.x = 0
-            self.reset_size()
-        if self.position.y < 0:
-            self.position.x = random(width)
-            self.position.y = SIZE_Y
-            self.reset_size()
-        if SIZE_Y < self.position.y:
-            self.position.x = random(width)
-            self.position.y = 0
-            self.reset_size()
-
-
-def mirror_x(x, mark_size):
-    return mark_size - x

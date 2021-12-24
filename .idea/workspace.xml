@@ -1,40 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="スピログラフ改良（実行が遅くなるので、draw_pointを配列に保存する）">
-      <change afterPath="$PROJECT_DIR$/data/action_001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_016.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_017.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_018.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_019.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_020.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_021.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_022.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_023.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_025.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_026.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_027.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_028.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_029.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_030.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/action_031.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_3.py" afterDir="false" />
+    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="ダンサー（アニメーション）">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sound.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_3_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_3_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_3_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/AudioWaveform/AudioWaveform.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/AudioWaveform/data/beat.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/BeatDetection/BeatDetection.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/BeatDetection/data/drums.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/FFTSpectrum/FFTSpectrum.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/FFTSpectrum/data/beat.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/PeakAmplitude/PeakAmplitude.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Analysis/PeakAmplitude/data/beat.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/BandPassFilter/BandPassFilter.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/HighPassFilter/HighPassFilter.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/LowPassFilter/LowPassFilter.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/Reverberation/Reverberation.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/Reverberation/data/vibraphon.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/VariableDelay/VariableDelay.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Effects/VariableDelay/data/vibraphon.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Env/Envelopes/Envelopes.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/IO/AudioInput/AudioInput.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/IO/AudioInputAndroid/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/IO/AudioInputAndroid/AudioInputAndroid.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Noise/Brown/Brown.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Noise/NoiseSpectrum/NoiseSpectrum.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Noise/Pink/Pink.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Noise/White/White.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/OscillatorSpectrum/OscillatorSpectrum.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/PulseWidth/PulseWidth.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/SawWave/SawWave.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/SineCluster/SineCluster.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/SineWave/SineWave.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/SquareWave/SquareWave.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Oscillators/TriangleWave/TriangleWave.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/AudioSampleManipulation/AudioSampleManipulation.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/JumbleSoundfile/JumbleSoundfile.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/JumbleSoundfile/data/beat.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Keyboard/Keyboard.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Keyboard/data/1.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Keyboard/data/2.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Keyboard/data/3.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Keyboard/data/4.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Keyboard/data/5.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Sampler/Sampler.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Sampler/data/1.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Sampler/data/2.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Sampler/data/3.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Sampler/data/4.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/Sampler/data/5.aif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/SimplePlayback/SimplePlayback.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/SimplePlayback/data/vibraphon.aiff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/StereoSample/StereoSample.pde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/examples/Soundfile/StereoSample/data/stereo441hzoutofphase.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/images.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/library.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/library/javamp3-1.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/library/jsyn-20171016.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/sound/library/sound.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/png_to_mp4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_001.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_004.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_006.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_012.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_019.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_019.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_020.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_020.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_021.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_021.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_024.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_025.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_025.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_028.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_028.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/action_030.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/action_030.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_3_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_3_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +119,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\data" />
+      <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons" />
+      <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\libraries" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\lib" />
     </key>
@@ -125,7 +172,7 @@
       <workItem from="1639811036580" duration="2900000" />
       <workItem from="1639816515654" duration="53164000" />
       <workItem from="1640166641983" duration="17869000" />
-      <workItem from="1640251619916" duration="8422000" />
+      <workItem from="1640251619916" duration="17871000" />
     </task>
     <task id="LOCAL-00001" summary="虹">
       <created>1639825465711</created>
@@ -239,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640296087530</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ダンサー（アニメーション）">
+      <created>1640302919959</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1640302919959</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,10 +327,11 @@
     <MESSAGE value="三角関数" />
     <MESSAGE value="サイクロイド曲線" />
     <MESSAGE value="スピログラフ改良（実行が遅くなるので、draw_pointを配列に保存する）" />
-    <option name="LAST_COMMIT_MESSAGE" value="スピログラフ改良（実行が遅くなるので、draw_pointを配列に保存する）" />
+    <MESSAGE value="ダンサー（アニメーション）" />
+    <option name="LAST_COMMIT_MESSAGE" value="ダンサー（アニメーション）" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640302498939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640313956038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/processing_py_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1639810475506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

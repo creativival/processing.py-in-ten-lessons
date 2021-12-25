@@ -12,6 +12,7 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 1000
 SIZE_Y = 1000
+SPEED = 5
 count = 0
 is_countable = True
 
@@ -25,7 +26,7 @@ def draw():
     global count
     background(BACKGROUND_COLOR)
     if is_countable:
-        count += 1
+        count += SPEED
     for i in range(101):
         # 方眼紙
         stroke(63)
@@ -37,7 +38,7 @@ def draw():
     stroke(255)
     vertex_point_1 = PVector(0, 0)
     vertex_point_2 = PVector(500, 500)
-    add_value = count / 2.0
+    add_value = count
     control_point_1 = PVector.add(
         vertex_point_1,
         PVector(0, add_value)

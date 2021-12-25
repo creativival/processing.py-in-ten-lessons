@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）">
-      <change afterPath="$PROJECT_DIR$/lesson_2_8_1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2_8_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_2_８.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_9.py" afterDir="false" />
+    <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="ベジェ曲線による円弧の近似">
+      <change beforePath="$PROJECT_DIR$/lesson_2_8_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_8_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2_8_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2_8_2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +97,7 @@
       <workItem from="1640166641983" duration="17869000" />
       <workItem from="1640251619916" duration="17871000" />
       <workItem from="1640341665677" duration="6896000" />
-      <workItem from="1640463539426" duration="3691000" />
+      <workItem from="1640463539426" duration="4002000" />
     </task>
     <task id="LOCAL-00001" summary="虹">
       <created>1639825465711</created>
@@ -244,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640379151002</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="ベジェ曲線による円弧の近似">
+      <created>1640468839669</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1640468839669</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,10 +284,11 @@
     <MESSAGE value="スピログラフ動画制作" />
     <MESSAGE value="ベジェ曲線による方眼紙の変形" />
     <MESSAGE value="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）" />
-    <option name="LAST_COMMIT_MESSAGE" value="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）" />
+    <MESSAGE value="ベジェ曲線による円弧の近似" />
+    <option name="LAST_COMMIT_MESSAGE" value="ベジェ曲線による円弧の近似" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640468539861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/processing_py_in_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1640468933127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/processing_py_ten_lessons$processing_py.coverage" NAME="processing.py のカバレッジ結果" MODIFIED="1639810475506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

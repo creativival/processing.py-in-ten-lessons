@@ -31,7 +31,7 @@ def draw():
     pass
 
 
-def mouseClicked():
+def mousePressed():
     # 画像を保存
     print('save image')
     save('output_images/grid.png')

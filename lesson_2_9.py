@@ -10,8 +10,9 @@ import util
 BACKGROUND_COLOR = color(0, 44, 77)
 SIZE_X = 1000
 SIZE_Y = 1000
+SPEED = 5
 count = 0
-is_addable = True
+is_countable = True
 
 
 def setup():
@@ -24,22 +25,20 @@ def setup():
 def draw():
     global count
     background(BACKGROUND_COLOR)
-    if is_addable:
-        count += 1
-    for i in range(501):
+    if is_countable:
+        count += SPEED
+    for i in range(1001):
         # # 方眼紙
         # line(i * 10, 0, i * 10, height)
         # line(0, i * 10, width, i * 10)
         # ベジェ曲線
-        vertex_point_1 = PVector(i * 10 - 2000, 0)
-        vertex_point_2 = PVector(i * 10 - 2000, height)
-        if is_addable:
-            count += 1
+        vertex_point_1 = PVector(i * 10 - 4500, 0)
+        vertex_point_2 = PVector(i * 10 - 4500, height)
         # if i <= 250:
         #     add_value = i * count / 20.0
         # else:
         #     add_value = -(501 - i) * count / 20.0
-        add_value = count / 20.0
+        add_value = count
         control_point_1 = PVector.add(
             vertex_point_1,
             PVector(add_value, add_value)
@@ -63,6 +62,6 @@ def draw():
         )
 
 
-def mouseClicked():
-    global is_addable
-    is_addable = not is_addable
+def mousePressed():
+    global is_countable
+    is_countable = not is_countable

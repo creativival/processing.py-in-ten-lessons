@@ -47,3 +47,31 @@ class Cylinder:
                     self.radius * cos(angle * i),
                 )
         endShape()
+
+        beginShape(TRIANGLE_STRIP)
+        for i in range(self.number_of_vertices):
+            vertex(0, -self.height/2, 0)
+            vertex(
+                self.radius * sin(angle * i),
+                -self.height/2,
+                self.radius * cos(angle * i),
+            )
+            vertex(
+                self.radius * sin(angle * (i + 1)),
+                -self.height/2,
+                self.radius * cos(angle * (i + 1)),
+            )
+            if not self.is_corn:
+                vertex(0, self.height/2, 0)
+                vertex(
+                    self.radius * sin(angle * i),
+                    self.height/2,
+                    self.radius * cos(angle * i),
+                )
+                vertex(
+                    self.radius * sin(angle * (i + 1)),
+                    self.height/2,
+                    self.radius * cos(angle * (i + 1)),
+                )
+
+        endShape()

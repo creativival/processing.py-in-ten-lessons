@@ -14,6 +14,7 @@ NUMBER_OF_VERTICES = 6
 
 def setup():
     size(SIZE_X, SIZE_Y, P3D)
+    stroke(127)
 
 
 def draw():

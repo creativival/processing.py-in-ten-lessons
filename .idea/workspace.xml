@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5896cd0a-2a33-4d4d-b4d6-9249ba316ecc" name="変更" comment="ベジェ曲線による方眼紙の変形（不可視領域にも線を追加）">
-      <change afterPath="$PROJECT_DIR$/lesson_2_８.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creative_coding2_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creative_coding2_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creative_coding2_3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/creative_coding2_4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/addons/p5.sound.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/addons/p5.sound.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/empty-example/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/empty-example/sketch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/p5-test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/p5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/p5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/p5.pre-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/p5/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,17 +57,26 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/p5" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\data" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons" />
       <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\libraries" />
-      <recent name="C:\Users\nspen\GitHub\processing.py-in-ten-lessons\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/p5" />
     </key>
   </component>
   <component name="RunManager">

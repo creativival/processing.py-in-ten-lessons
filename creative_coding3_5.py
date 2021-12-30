@@ -1,6 +1,8 @@
 """
 地球儀（テキスチャースフィア）
 """
+import p3d_util
+
 if False:
     from lib.Processing3 import *
 
@@ -21,6 +23,7 @@ def setup():
 
 
 def draw():
+    p3d_util.test_lighting()
     translate(width / 2, height / 2)
     rotateX(map(mouseY, 0, height, -PI, PI))
     rotateY(map(mouseX, 0, width, -PI, PI))

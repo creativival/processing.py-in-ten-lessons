@@ -8,19 +8,33 @@ if False:
 
 
 class Cylinder:
-    def __init__(self, _radius, _height, _number_of_vertices, _color, _is_corn=0):
+    def __init__(self, _position, _rotate, _radius, _height, _number_of_vertices, _color, _is_corn=0):
         if _number_of_vertices >= 64:
             _number_of_vertices = 64
+        self.position = _position
+        self.rotate = _rotate
         self.radius = _radius
         self.height = _height
         self.number_of_vertices = _number_of_vertices
         self.color = _color
         self.is_corn = _is_corn
 
+    def update(self):
+        self.rotate.z += 0.01
+
     def draw(self):
         fill(self.color)
         angle = TWO_PI / self.number_of_vertices
 
+        pushMatrix()
+        translate(
+            self.position.x,
+            self.position.y,
+            self.position.z
+        )
+        rotateX(self.rotate.x)
+        rotateY(self.rotate.y)
+        rotateZ(self.rotate.z)
         # 底面
         if self.number_of_vertices >= 64:
             # 円錐
@@ -104,6 +118,7 @@ class Cylinder:
                     self.radius * cos(angle * i),
                 )
         endShape()
+        popMatrix()
 
 
 def draw_axes():
@@ -135,20 +150,24 @@ def test_drawing_cylinder(_radius, _height, _number_of_vertices):
     # 錐
     pushMatrix()
     c = color(0, 255, 0)
-    translate(width / 2, height / 3)
-    rotateX(map(mouseY, 0, height, -PI, PI))
-    rotateY(map(mouseX, 0, width, -PI, PI))
-    draw_axes()
-    cylinder = Cylinder(_radius, _height, _number_of_vertices, c, 1)
+    position = PVector(width / 2, height / 3, 0)
+    _rotate = PVector(
+        map(mouseY, 0, height, -PI, PI),
+        map(mouseX, 0, width, -PI, PI),
+        0
+    )
+    cylinder = Cylinder(position, _rotate, _radius, _height, _number_of_vertices, c, 1)
     cylinder.draw()
     popMatrix()
     # 柱
     pushMatrix()
     c = color(255, 0, 0)
-    translate(width / 2, height * 3 / 4)
-    rotateX(map(mouseY, 0, height, -PI, PI))
-    rotateY(map(mouseX, 0, width, -PI, PI))
-    draw_axes()
-    cylinder = Cylinder(_radius, _height, _number_of_vertices, c, 0)
+    position = PVector(width / 2, height * 3 / 4, 0)
+    _rotate = PVector(
+        map(mouseY, 0, height, -PI, PI),
+        map(mouseX, 0, width, -PI, PI),
+        0
+    )
+    cylinder = Cylinder(position, _rotate, _radius, _height, _number_of_vertices, c, 0)
     cylinder.draw()
     popMatrix()

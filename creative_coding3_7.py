@@ -1,5 +1,5 @@
 """
-たくさんのシリンダー
+たくさんのシリンダー（アニメーション）
 """
 import p3d_util
 
@@ -9,28 +9,13 @@ if False:
 SIZE_X = 1200
 SIZE_Y = 750
 details = [3, 4, 6]
+cylinders = []
 
 
 def setup():
     global globe
     size(SIZE_X, SIZE_Y, P3D)
     colorMode(HSB, 360, 100, 100)
-    background("#E7ECF2")
-    draw_cylinders()
-
-
-def draw():
-    pass
-
-
-def mousePressed():
-    background("#E7ECF2")
-    draw_cylinders()
-
-
-def draw_cylinders():
-    lights()
-
     for i in range(50):
         cylinder_radius = random(50, 100)
         cylinder_height = cylinder_radius / 2
@@ -55,4 +40,15 @@ def draw_cylinders():
             cylinder_color,
             0
         )
+        cylinders.append(cylinder)
+
+
+def draw():
+    background("#E7ECF2")
+    lights()
+    for cylinder in cylinders:
+        # cylinder.rotate.y += frameCount * 0.0001
+        cylinder.update()
         cylinder.draw()
+
+

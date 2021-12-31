@@ -14,7 +14,6 @@ cylinders = []
 
 
 def setup():
-    global globe
     size(SIZE_X, SIZE_Y, P3D)
     colorMode(HSB, 360, 100, 100)
     create_cylinders()

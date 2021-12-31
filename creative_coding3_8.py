@@ -1,5 +1,5 @@
 """
-たくさんのシリンダー（アニメーション）
+たくさんのシリンダー（アニメーション）カメラ移動
 """
 import p3d_util
 
@@ -22,8 +22,12 @@ def setup():
 
 def draw():
     background("#E7ECF2")
+    camera_x = 1000 * sin(frameCount * 0.01)
+    camera_z = 1000 * cos(frameCount * 0.01)
+    camera(width / 2 + camera_x, height / 2, camera_z, width / 2, height / 2, 0, 0, 1, 0)
     lights()
     for cylinder in cylinders:
+        # cylinder.rotate.y += frameCount * 0.0001
         cylinder.update(ROTATE_SPEED)
         cylinder.draw()
 
@@ -35,15 +39,15 @@ def mousePressed():
 
 
 def create_cylinders():
-    for i in range(50):
+    for i in range(100):
         cylinder_radius = random(50, 100)
         cylinder_height = cylinder_radius / 2
         cylinder_color = color(random(360), 100, 100)
         cylinder_detail = details[int(random(len(details)))]
         cylinder_position = PVector(
             random(width),
-            random(height),
-            random(-100)
+            random(height / 2 - width / 2, height / 2 + width / 2),
+            random(-width / 2, width / 2)
         )
         cylinder_rotate = PVector(
             random(TWO_PI),
@@ -60,6 +64,3 @@ def create_cylinders():
             0
         )
         cylinders.append(cylinder)
-
-
-

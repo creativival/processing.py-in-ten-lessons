@@ -19,8 +19,8 @@ class Cylinder:
         self.color = _color
         self.is_corn = _is_corn
 
-    def update(self):
-        self.rotate.z += 0.01
+    def update(self, rotate_speed):
+        self.rotate.y += 0.01 * rotate_speed
 
     def draw(self):
         fill(self.color)
@@ -32,9 +32,9 @@ class Cylinder:
             self.position.y,
             self.position.z
         )
+        rotateZ(self.rotate.z)
         rotateX(self.rotate.x)
         rotateY(self.rotate.y)
-        rotateZ(self.rotate.z)
         # 底面
         if self.number_of_vertices >= 64:
             # 円錐
@@ -153,7 +153,12 @@ def test_drawing_cylinder(_radius, _height, _number_of_vertices):
     position = PVector(width / 2, height / 3, 0)
     _rotate = PVector(
         map(mouseY, 0, height, -PI, PI),
-        map(mouseX, 0, width, -PI, PI),
+        frameCount * 0.01,
+        map(mouseX, 0, width, -PI, PI)
+    )
+    _rotate = PVector(
+        0,
+        frameCount * 0.01,
         0
     )
     cylinder = Cylinder(position, _rotate, _radius, _height, _number_of_vertices, c, 1)
@@ -165,8 +170,8 @@ def test_drawing_cylinder(_radius, _height, _number_of_vertices):
     position = PVector(width / 2, height * 3 / 4, 0)
     _rotate = PVector(
         map(mouseY, 0, height, -PI, PI),
-        map(mouseX, 0, width, -PI, PI),
-        0
+        frameCount * 0.01,
+        map(mouseX, 0, width, -PI, PI)
     )
     cylinder = Cylinder(position, _rotate, _radius, _height, _number_of_vertices, c, 0)
     cylinder.draw()

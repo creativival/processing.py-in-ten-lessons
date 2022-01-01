@@ -9,6 +9,7 @@ if False:
 SIZE_X = 1200
 SIZE_Y = 750
 ROTATE_SPEED = 5
+CAMERA_DISTANCE = 1000
 details = [3, 4, 6]
 cylinders = []
 
@@ -21,8 +22,8 @@ def setup():
 
 def draw():
     background("#E7ECF2")
-    camera_x = 1000 * sin(frameCount * 0.01)
-    camera_z = 1000 * cos(frameCount * 0.01)
+    camera_x = CAMERA_DISTANCE * sin(frameCount * 0.01)
+    camera_z = CAMERA_DISTANCE * cos(frameCount * 0.01)
     camera(width / 2 + camera_x, height / 2, camera_z, width / 2, height / 2, 0, 0, 1, 0)
     lights()
     for cylinder in cylinders:

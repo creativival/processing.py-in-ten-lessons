@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 import util
 
 """
@@ -36,3 +37,14 @@ def setup():
         mark_color = random(MIN_COLOR, MAX_COLOR)
         util.draw_mark(p, angle, mark_size, mark_color, MARK_TYPE)
         print(p, angle, mark_size, MARK_TYPE)
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

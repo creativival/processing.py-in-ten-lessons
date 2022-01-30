@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 
 
 def setup():
@@ -28,3 +29,14 @@ def setup():
     stroke(255, 99, 0)
     line(100, 100, cp1.x, cp1.y)
     line(400, 400, cp2.x, cp2.y)
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

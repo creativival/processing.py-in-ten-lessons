@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 
 BACKGROUND_COLOR = color(0, 44, 77)
 RADIUS = 100
@@ -61,3 +62,10 @@ def draw():
             stroke(255, 255, 0)
             line(y_cos, y_sin, 0, y_sin)
             line(x + 1, 0, x + 1, y_cos)
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

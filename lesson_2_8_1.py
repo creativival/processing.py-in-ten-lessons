@@ -4,6 +4,7 @@ S字カーブ
 
 if False:
     from lib.Processing3 import *
+import os
 import util
 
 BACKGROUND_COLOR = color(0, 44, 77)
@@ -58,3 +59,10 @@ def draw():
 def mousePressed():
     global is_countable
     is_countable = not is_countable
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

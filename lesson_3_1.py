@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 import util
 
 SETTINGS = {
@@ -86,3 +87,10 @@ def draw():
             (1 - dancer['ratio']) * height / 2.0 + dancer['y'],
         )
         image(images[img_num], dancer_position.x, dancer_position.y, img_size.x, img_size.y)
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

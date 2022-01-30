@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 
 TIGHTNESS = 0.5  # 曲率を変える（弾力性）
 
@@ -30,3 +31,14 @@ def setup():
     stroke(255, 99, 0)
     curve(0, 250, 0, 250, 100, 100, 400, 400)
     curve(100, 100, 400, 400, 500, 250, 500, 250)
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

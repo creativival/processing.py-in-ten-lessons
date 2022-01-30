@@ -3,6 +3,7 @@ leapColor
 """
 if False:
     from lib.Processing3 import *
+import os
 
 SIZE_X = 300
 SIZE_Y = 500
@@ -23,3 +24,10 @@ def setup():
         fill(c)
         rect(0, i, width, 5)
     save('output_images/lerp_color.png')
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

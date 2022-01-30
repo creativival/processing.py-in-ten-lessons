@@ -5,6 +5,7 @@ import p3d_util
 
 if False:
     from lib.Processing3 import *
+import os
 
 SIZE_X = 1200
 SIZE_Y = 750
@@ -28,3 +29,10 @@ def draw():
     rotateX(map(mouseY, 0, height, -PI, PI))
     rotateY(map(mouseX, 0, width, -PI, PI))
     shape(globe, 0, 0)
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

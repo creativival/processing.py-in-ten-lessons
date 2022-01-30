@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 
 BACKGROUND_COLOR = color(0, 44, 77)
 RADIUS = 100
@@ -49,3 +50,10 @@ def draw():
             ellipse(draw_point.x, draw_point.y, 4, 4)
             print(degrees(angle))
             print(circle_center)
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

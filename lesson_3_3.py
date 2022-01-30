@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 import util
 
 add_library("sound")
@@ -88,3 +89,10 @@ def draw():
         m.draw()
         m.update()
         m.through_walls()
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

@@ -3,6 +3,7 @@
 """
 if False:
     from lib.Processing3 import *
+import os
 
 SIZE_X = 1200
 SIZE_Y = 750

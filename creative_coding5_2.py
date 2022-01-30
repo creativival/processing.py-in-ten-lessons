@@ -3,6 +3,7 @@
 """
 if False:
     from lib.Processing3 import *
+import os
 
 SIZE_X = 1200
 SIZE_Y = 700
@@ -73,3 +74,10 @@ class Crystal:
         b.setTexture(_img)
         shape(b)
         popMatrix()
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

@@ -4,6 +4,7 @@ RGB
 
 if False:
     from lib.Processing3 import *
+import os
 
 
 def setup():
@@ -24,3 +25,14 @@ def setup():
     print(hello, world)
     print(hello + world)
     # print('hello {}'.format(world))  # 未対応
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

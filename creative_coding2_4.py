@@ -3,6 +3,7 @@
 """
 if False:
     from lib.Processing3 import *
+import os
 
 SIZE_X = 1200
 SIZE_Y = 750
@@ -45,3 +46,10 @@ class Particle:
 
     def update(self):
         self.angle += self.step_angle
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

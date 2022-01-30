@@ -3,6 +3,7 @@
 """
 if False:
     from lib.Processing3 import *
+import os
 import p3d_util
 
 SIZE_X = 1200
@@ -19,3 +20,10 @@ def setup():
 def draw():
     background(255)
     p3d_util.test_drawing_cylinder(RADIUS, HEIGHT, NUMBER_OF_VERTICES)
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 import util
 
 MARK_COLOR = color(255, 0, 255)
@@ -42,3 +43,14 @@ def setup():
     util.draw_bezier_shape(vertices, control_points)
     util.draw_check_point(vertices, control_points)
     popMatrix()
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

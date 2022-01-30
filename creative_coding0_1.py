@@ -5,6 +5,7 @@ import p3d_util
 
 if False:
     from lib.Processing3 import *
+import os
 
 SIZE_X = 1200
 SIZE_Y = 750
@@ -25,21 +26,26 @@ def draw():
     noFill()
     pushMatrix()
     translate(width / 2, height / 2, 0)
-    p3d_util.draw_axes()
+    p3d_util.draw_axes(4)
     rotateX(rotate.x)
     rotateY(rotate.y)
     rotateZ(rotate.z)
-    p3d_util.draw_axes()
+    p3d_util.draw_axes(2)
     popMatrix()
 
-    if keyPressed:
-        if key == 'x':
-            rotate.x += 0.01
-        elif key == 'y':
-            rotate.y += 0.01
-        elif key == 'z':
-            rotate.z += 0.01
-        elif key == 'r':
-            rotate.x = 0
-            rotate.y = 0
-            rotate.z = 0
+
+def keyPressed():
+    if key == 'x':
+        rotate.x += 0.01
+    elif key == 'y':
+        rotate.y += 0.01
+    elif key == 'z':
+        rotate.z += 0.01
+    elif key == 'r':
+        rotate.x = 0
+        rotate.y = 0
+        rotate.z = 0
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

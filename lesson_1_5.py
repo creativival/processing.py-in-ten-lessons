@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 
 BACKGROUND_COLOR = color(0, 44, 77)
 # DEGREE_ANGLES = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 360]
@@ -37,3 +38,14 @@ def setup():
         fill(255, 0, 0)
         noStroke()
         text(str(a), radius * cos(angle) / 2.0, radius * sin(angle) / 2.0)
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

@@ -4,6 +4,7 @@
 
 if False:
     from lib.Processing3 import *
+import os
 
 BACKGROUND_COLOR = color(0, 44, 77)
 RADIUS = 100
@@ -44,3 +45,14 @@ def setup():
         if y_tan < 1000 and _y_tan < 1000:
             line(_x, _y_tan, x, y_tan)
         # text(str(a), radius * cos(angle) / 2.0, radius * sin(angle) / 2.0)
+
+
+def draw():
+    pass
+
+
+def keyPressed():
+    if key == 's':
+        file_name = os.path.basename(__file__).split('.')[0]
+        print('{}.png'.format(file_name))
+        save('output_images/{}.png'.format(file_name))

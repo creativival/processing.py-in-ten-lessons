@@ -5,6 +5,7 @@ P3D Util
 """
 if False:
     from lib.Processing3 import *
+import os
 
 
 class Cylinder:
@@ -121,8 +122,9 @@ class Cylinder:
         popMatrix()
 
 
-def draw_axes():
+def draw_axes(weight=1):
     stroke(255, 0, 0)
+    strokeWeight(weight)
     line(0, 0, 0, 1000, 0, 0)
     stroke(0, 255, 0)
     line(0, 0, 0, 0, 1000, 0)
